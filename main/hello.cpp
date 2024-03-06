@@ -7,7 +7,7 @@ int main(void) {
   cout << "This is Sinchana trying here\n";
   cout << "Hello, Jenkins\n";
   cout << "I have successfully built and run\n";
-  cout << "Nice to meet you\n";
+  cout << "Webhook successfully enabled\n";
 
   return 0;
 }
