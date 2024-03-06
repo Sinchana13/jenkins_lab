@@ -19,7 +19,7 @@ pipeline {
             steps {
                 // Print output of .cpp file using a shell script
                 echo 'testing'
-                sh './PES1UG21CS596'
+                sh './PES1UG21CS913'
             }
             post {
                 failure {
