@@ -18,6 +18,8 @@ pipeline {
         stage('Test') {
             steps {
                 // Print output of .cpp file using a shell script
+
+                //non existing file
                 echo 'testing'
                 sh './PES1UG21CS913'
             }
