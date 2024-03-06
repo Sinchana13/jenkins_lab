@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Compile the .cpp file using a shell script
                 echo 'Building'
-                sh 'g++ -o PES1UG21CS596 hello.cpp'
+                sh 'g++ -o PES1UG21CS596 main/hello.cpp'
             }
             post {
                 failure {
