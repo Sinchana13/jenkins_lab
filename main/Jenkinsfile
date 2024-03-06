@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // Compile the .cpp file using a shell script
+                sh 'g++ -o hello hello.cpp'
+            }
+            post {
+                failure {
+                    echo 'Pipeline failed during the build stage'
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                // Print output of .cpp file using a shell script
+                sh './hello'
+            }
+            post {
+                failure {
+                    echo 'Pipeline failed during the test stage'
+                }
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Add deployment steps here, if applicable
+            }
+            post {
+                failure {
+                    echo 'Pipeline failed during the deploy stage'
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+    }
+}
